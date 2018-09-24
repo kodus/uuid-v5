@@ -1,0 +1,30 @@
+{
+    "name": "kodus/uuid-v5",
+    "description": "Simple UUID v5 generator",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rasmus Schultz",
+            "email": "rasc@jfmedier.dk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kodus\\Helpers\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kodus\\Test\\Unit\\": "tests/unit/"
+        }
+    }
+}
