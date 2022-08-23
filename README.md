@@ -3,7 +3,7 @@ kodus/uuid-v5
 
 Simple static UUID v5 generator/validator.
 
-[![PHP Version](https://img.shields.io/badge/php-8.0%2B-blue.svg)](https://packagist.org/packages/kodus/uuid-v4)
+[![PHP Version](https://img.shields.io/badge/php-8.0%2B-blue.svg)](https://packagist.org/packages/kodus/uuid-v5)
 [![Build Status](https://travis-ci.org/kodus/uuid-v5.svg?branch=master)](https://travis-ci.org/kodus/uuid-v5)
 
 ## Usage
