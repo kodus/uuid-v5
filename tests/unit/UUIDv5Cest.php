@@ -8,7 +8,7 @@ use UnitTester;
 
 class UUIDv5Cest
 {
-    public function validateUUID_v5(UnitTester $I)
+    public function validateUUIDv5(UnitTester $I): void
     {
         $I->assertTrue(UUIDv5::isValid("0a300ee9-f9e4-5697-a51a-efc7fafaba67"));
         $I->assertTrue(UUIDv5::isValid("0A300EE9-F9E4-5697-A51A-EFC7FAFABA67"));
@@ -23,7 +23,7 @@ class UUIDv5Cest
         $I->assertFalse(UUIDv5::isValid("0a300ee9f9e45697a51aefc7fafaba67")); // missing dashes
     }
 
-    public function createNamespacedUUID(UnitTester $I)
+    public function createNamespacedUUID(UnitTester $I): void
     {
         $uuid = UUIDv5::create(UUIDv5::NS_URL, "http://example.com/");
 
@@ -31,7 +31,7 @@ class UUIDv5Cest
 
         $I->assertSame("0a300ee9-f9e4-5697-a51a-efc7fafaba67", $uuid);
 
-        $I->expectException(InvalidArgumentException::class, function () {
+        $I->expectThrowable(InvalidArgumentException::class, function () {
             UUIDv5::create("not-a-valid-uuid-obvs", "http://example.com/");
         });
     }
